@@ -1,0 +1,102 @@
+.attribution {
+    position: absolute;
+    bottom: $border;
+    left: $border;
+    color: white;
+    font-size: 5vw;
+    height: 2em;
+    font-family: 'Quintessential', cursive;
+
+
+    .letter-group__item {
+        @include clear();
+    }
+
+    .letter {
+        float: left;
+        &:not(:first-child) {
+            margin-left: .3em;
+        }
+
+        &:nth-child(3) {
+            clear: left;
+            margin-left: 0;
+        }
+
+        &.letter--enter {
+            transform: translateX(4em) scale(3);
+        }
+
+        &.letter--enter-active {
+            transform: none;
+            transition: opacity $duration, transform $duration;
+        }
+    }
+}
+
+.homepage__title {
+    font-size: 15vw;
+    text-transform: uppercase;
+    display: inline-block;
+    margin-left: $border;
+    margin-top: $border;
+
+    .letter {
+        &.letter--enter {
+            transform: translateX(100vw);
+        }
+
+        &.letter--enter-active {
+            transform: none;
+            transition: opacity $duration, transform $duration;
+        }
+    }
+}
+
+.mini {
+    margin-top: -2vw;
+    margin-left: $border;
+    font-size: 5vw;
+    .letter {
+        &.letter--enter {
+            opacity: 0;
+            transform: translateY(100vw);
+        }
+
+        &.letter--enter-active {
+            opacity: 1;
+            transform: none;
+            transition: opacity .6s, transform .6s;
+        }
+    }
+}
+
+
+
+
+.subtitle {
+    font-family: 'Great Vibes', cursive;
+    color: #B13130;
+    font-size: 15vw;
+    transform: rotateZ(-25deg);
+    top: -12vw;
+    position: relative;
+    left: 20vw;
+
+    .letter {
+
+        &:first-child {
+            font-size: 20vw;
+            // Force hardawre acceleration / rendering
+            backface-visibility: hidden;
+            perspective: 1000;
+        }
+
+        &.letter--leave-active {
+            opacity: 0;
+            transform: scale(1);
+            transition: opacity $duration, transform $duration;
+        }
+    }
+}
+
