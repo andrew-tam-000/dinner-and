@@ -40,7 +40,7 @@ class Homepage extends Component {
         window.setTimeout(() => {
             this.setState({
                 children: this.state.children.concat(
-                    <div className='mini'>
+                    <div className='homepage__mini'>
                         <BouncyTitle
                             title='AND'
                             single={true}
@@ -53,17 +53,17 @@ class Homepage extends Component {
         window.setTimeout(() => {
             this.setState({
                 children: this.state.children.concat(
-                    <div className='subtitle'>
+                    <div className='homepage__subtitle'>
                         <ChangingTitle/>
                     </div>
                 )
             })
-        }, 3000)
+        }, 3600 )
 
         window.setTimeout(() => {
             this.setState({
                 children: this.state.children.concat(
-                    <div className='attribution'>
+                    <div className='homepage__attribution'>
                         <BouncyTitle
                             title='from the Clinton Collection'
                             words={true}
@@ -72,7 +72,7 @@ class Homepage extends Component {
                     </div>
                 )
             })
-        }, 2000)
+        }, 2400)
 
     }
 }

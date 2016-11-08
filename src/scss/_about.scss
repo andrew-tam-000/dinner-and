@@ -30,8 +30,10 @@
 
 
 .about__content {
+    left: $border;
     font-size: 8vw;
-    top: 20%;
+    top: 50%;
+    transform: translateY(-50%);
     position: relative;
     width: 100vw - $image-width;
 }
