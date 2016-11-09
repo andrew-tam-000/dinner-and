@@ -1,12 +1,17 @@
+
 .about {
 
-    &.slide--down {
-        .about__question {
-            opacity: 0;
-            transform: translateY(-50vw);
+    font-size: 1vw;
 
-            &.about__question--two {
-                transform: translateY(-60vw);
+    &.slide {
+        &.slide--down {
+            .about__question {
+                opacity: 0;
+                transform: translateY(-50/40 * 1em);
+
+                &.about__question--two {
+                    transform: translateY(-60/40 * 1em);
+                }
             }
         }
     }
@@ -16,25 +21,31 @@
 .about__question {
     opacity: 1;
     transition: transform 1s, opacity 1s;
-    font-size: 40vw;
+    font-size: 40em;
     position: absolute;
-    bottom: 25vw;
-    right: 20vw;
+    bottom: $image-width/1.4/40;
+    right: $image-width/2.5/40;
     transform: none;
 
     &.about__question--two {
-        bottom: 30vw;
-        right: 5vw;
+        bottom: $image-width/1.5/40;
+        right: 5/40 * 1em;
     }
 }
 
 
 .about__content {
     left: $border;
-    font-size: 8vw;
+    font-size: 8em;
     top: 50%;
     transform: translateY(-50%);
     position: relative;
-    width: 100vw - $image-width;
+    width: (100em  - $image-width)/8;
 }
 
+
+@media (min-aspect-ratio: 1/1) {
+    .about {
+        font-size: 1vh;
+    }
+}

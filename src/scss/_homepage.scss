@@ -1,10 +1,15 @@
+.homepage {
+    font-size: 1vw;
+}
+
 .homepage__attribution {
+    $_font-size: 4em;
     position: absolute;
     bottom: $border;
     left: $border;
     color: white;
-    font-size: 5vw;
-    height: 2em;
+    font-size: $_font-size;
+    min-height: 2.4em;
     font-family: 'Quintessential', cursive;
 
 
@@ -23,6 +28,11 @@
             margin-left: 0;
         }
 
+        &:nth-child(n + 3) {
+            margin-top: .4em;
+        }
+
+
         &.letter--enter {
             transform: translateX(4em) scale(3);
         }
@@ -35,7 +45,7 @@
 }
 
 .homepage__title {
-    font-size: 15vw;
+    font-size: 15em;
     text-transform: uppercase;
     display: inline-block;
     margin-left: $border;
@@ -43,7 +53,7 @@
 
     .letter {
         &.letter--enter {
-            transform: translateX(100vw);
+            transform: translateX(100em);
         }
 
         &.letter--enter-active {
@@ -54,13 +64,13 @@
 }
 
 .homepage__mini {
-    margin-top: -2vw;
+    margin-top: -.5em;
     margin-left: $border;
-    font-size: 5vw;
+    font-size: 5em;
     .letter {
         &.letter--enter {
             opacity: 0;
-            transform: translateY(100vw);
+            transform: translateY(100em);
         }
 
         &.letter--enter-active {
@@ -77,16 +87,18 @@
 .homepage__subtitle {
     font-family: 'Great Vibes', cursive;
     color: #B13130;
-    font-size: 15vw;
-    transform: rotateZ(-25deg);
-    top: -12vw;
-    position: relative;
-    left: 20vw;
+    font-size: 20em;
+    transform: translateX(-1em) translateY(-50%) rotateZ(-25deg);
+    position: absolute;
+    width: 50%;
+    top: 2.3em;
+    left: 1.6em;
+    white-space: nowrap;
 
     .letter {
 
         &:first-child {
-            font-size: 20vw;
+            font-size: 1.5em;
             // Force hardawre acceleration / rendering
             backface-visibility: hidden;
             perspective: 1000;
@@ -100,3 +112,11 @@
     }
 }
 
+//@media (min-aspect-ratio: 1/1) and (max-height: 800px) {
+@media (min-aspect-ratio: 1/1) {
+    .homepage {
+        font-size: 1vh;
+    }
+}
+
+//@media screen and (min-aspect-ratio: 1/1) {

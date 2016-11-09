@@ -1,7 +1,7 @@
 $duration: .4s;
-$image-width: 40vw;
+$image-width: 60em;
 $border: 2vw;
-$mobile: 400px;
+$mobile: 414px;
 
 @import 'reset';
 @import 'mixins';
@@ -29,18 +29,63 @@ body {
 }
 
 
-@import 'root';
+.image {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: $image-width;
+    height: auto;
+    transition: transform 1s;
+    font-size: 1vw;
+}
 
-@media (max-width: $mobile) {
-    $border: 4vw;
-    @import 'root';
-    .homepage {
-        .subtitle {
-            position: absolute;
-            width: 100%;
-            top: 50%;
-            margin-top: -1.25em;
+.pictures__container {
+    position: relative;
+    overflow: auto;
+    margin-top: $border;
+    margin-left: $border;
+    margin-right: $border;
+    height: 50vw;
+    white-space: nowrap;
+}
+
+.pictures__captions {
+    position: absolute;
+    right: $border;
+    bottom: $border;
+    width: 60vw - $border - $border;
+    height: 30vw;
+}
+
+.pictures__image {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    //width: 100%;
+    height: auto;
+    max-height: 100%;
+    &:not(:first-child) {
+        margin-left: 4vw;
+    }
+}
+
+.root {
+    .root--pictures {
+        .image {
+            transform: translateX(-60vw);
         }
     }
 }
 
+@import 'slide';
+@import 'letter';
+@import 'homepage';
+@import 'about';
+@import 'nav';
+@import 'hamburger';
+
+@media (min-aspect-ratio: 1/1) {
+    .image {
+        font-size: 1vh;
+    }
+}
