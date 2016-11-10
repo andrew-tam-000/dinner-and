@@ -7,7 +7,7 @@ class BouncyTitle extends Component {
         super(props);
 
         this.state = {
-            lettersToShow: []
+            piecesToShow: []
         }
     }
 
@@ -25,52 +25,51 @@ class BouncyTitle extends Component {
                 className='letter-group'
                 component='div'
             >
-                    <ReactCSSTransitionGroup
-                        transitionName={{
-                            enter: 'letter--enter',
-                            enterActive: 'letter--enter-active',
-                            leave: 'letter--leave',
-                            leaveActive: 'letter--leave-active',
-                        }}
-                        transitionEnterTimeout={1000}
-                        transitionLeaveTimeout={1000}
-                        className='letter-group__item'
-                        key={this.props.title}
-                        component='div'
-                    >
-                        { this.state.lettersToShow.map( (letter, idx)  => <span className='letter'  key={''+idx+letter+this.props.title}>{letter}</span>) }
-                    </ReactCSSTransitionGroup>
+                <div key={this.props.title} className='letter-group__item'>
+                    {
+                        this.getPieces(this.props.title).map( (piece, idx)  => {
+
+                            let classes = ['letter'];
+
+                            if ( this.state.piecesToShow[idx] ) classes.push('letter--enter');
+
+                            return (
+                                <span className={classes.join(' ')}  key={''+idx+piece+this.props.title}>{piece}</span>
+                            );
+                        })
+                    }
+                </div>
             </ReactCSSTransitionGroup>
         );
     }
 
 
-    animate(letters) {
+    getPieces(phrase) {
+        let splitChar = (this.props.words) ? ' ' : '';
+        return phrase.split(splitChar);
+    }
 
+    animate(phrase) {
         return new Promise( (resolve, reject) => {
-
             let offset = (this.props.single) ? 0 : this.props.speed;
-            let splitChar = (this.props.words) ? ' ' : '';
-
             // Loop over each letter and set an offset
-            letters.split(splitChar).forEach( (letter, idx) => {
+            this.getPieces(phrase).forEach( (letter, idx) => {
                 window.setTimeout( () => {
                     this.setState({
-                        lettersToShow: this.state.lettersToShow.concat(letter)
+                        piecesToShow: this.state.piecesToShow.concat(true)
                     }, () => {
-                        if ( idx === letters.length - 1 ) {
+                        if ( idx === this.getPieces(phrase).length - 1 ) {
                             resolve();
                         }
                     })
                 }, offset*idx);
             });
-
         });
     }
 
     componentWillReceiveProps(newProps) {
         this.setState({
-            lettersToShow: []
+            piecesToShow: []
         });
         this.animate(newProps.title);
     }
