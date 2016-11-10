@@ -1,5 +1,20 @@
 .homepage {
     font-size: 1vw;
+
+    &.slide {
+        &.slide--up {
+            .homepage__subtitle {
+                transform: translateX(-50%) translateY(calc(-50% + 50vh)) rotateZ(-25deg);
+            }
+            .homepage__mini{
+                transform: translateY(60vh);
+            }
+            .homepage__title {
+                transform: translateY(60vh);
+            }
+        }
+    }
+
 }
 
 .homepage__attribution {
@@ -49,6 +64,7 @@
     display: inline-block;
     margin-left: $border;
     margin-top: $border;
+    transition: transform 1s;
 
     .letter {
         transition: opacity $duration, transform $duration;
@@ -64,6 +80,7 @@
     margin-top: -.5em;
     margin-left: $border;
     font-size: 5em;
+    transition: transform 1s;
 
     .letter {
         opacity: 0;
@@ -84,7 +101,8 @@
     font-family: 'Great Vibes', cursive;
     color: #B13130;
     font-size: 20em;
-    transform: translateZ(1px) translateX(-50%) translateY(-50%) rotateZ(-25deg);
+    transform: translateX(-50%) translateY(-50%) rotateZ(-25deg);
+    transition: transform 1s;
     position: absolute;
     top: 40%;
     left: 50%;
