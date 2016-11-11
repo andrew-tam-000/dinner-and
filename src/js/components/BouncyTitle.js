@@ -71,11 +71,16 @@ class BouncyTitle extends Component {
         this.setState({
             piecesToShow: []
         });
-        this.animate(newProps.title);
+
+        window.setTimeout( () => {
+            this.animate(this.props.title);
+        }, 50)
     }
 
     componentDidMount() {
-        this.animate(this.props.title);
+        window.setTimeout( () => {
+            this.animate(this.props.title);
+        }, 50)
     }
 
 }
