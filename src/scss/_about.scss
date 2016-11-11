@@ -48,4 +48,8 @@
     .about {
         font-size: 1vh;
     }
+    .about__content {
+        width: calc(100% - 65vh);
+    }
 }
+
