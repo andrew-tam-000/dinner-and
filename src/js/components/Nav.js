@@ -38,7 +38,9 @@ class Nav extends Component {
                         }
                         className={classes.join(' ')}
                     >
+                        <a href='#'>
                         {item}
+                        </a>
                     </li>;
                 }) }
                 </ul>

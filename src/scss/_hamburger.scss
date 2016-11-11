@@ -4,6 +4,7 @@
     right: $border + 3.5vw;
     z-index: 4;
     font-size: 1vw;
+    display: block;
 
     width: 10em;
     height: 5em;
@@ -55,7 +56,7 @@
     }
 }
 
-@media (min-aspect-ratio: 1/1) and ( max-height: 800px) {
+@media (min-aspect-ratio: 1/1) {
     .hamburger {
         font-size: 1vh;
     }

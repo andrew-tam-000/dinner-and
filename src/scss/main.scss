@@ -10,6 +10,11 @@ $mobile: 414px;
     box-sizing: border-box;
 }
 
+a {
+    color: inherit;
+    text-decoration: inherit;
+}
+
 
 .clear {
     @include clear();

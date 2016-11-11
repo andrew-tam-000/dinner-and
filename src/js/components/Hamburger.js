@@ -7,7 +7,7 @@ import * as menuActions from '../redux/actions/menu';
 class Hamburger extends Component {
     render() {
         return (
-            <div className={
+            <a className={
                 classnames(
                     'hamburger'
                     , {'hamburger--open': this.props.showMenu}
@@ -18,7 +18,7 @@ class Hamburger extends Component {
                 <div className='hamburger__bar  hamburger__bar--top'/>
                 <div className='hamburger__bar  hamburger__bar--middle'/>
                 <div className='hamburger__bar  hamburger__bar--bottom'/>
-            </div>
+            </a>
         )
     }
 }
