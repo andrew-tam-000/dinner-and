@@ -13,6 +13,12 @@
                 transform: translateY(60vh);
             }
         }
+
+        &.slide--left {
+            .homepage__subtitle {
+                transform: translateX(calc(-50% + 50vw)) translateY(-50%) rotateZ(-25deg);
+            }
+        }
     }
 
 }

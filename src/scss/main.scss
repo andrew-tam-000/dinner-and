@@ -77,7 +77,12 @@ body {
 .root {
     .root--pictures {
         .image {
-            transform: translateX(-60vw);
+            transform: scale(.5) translateX(calc(-200vw + 150%)) translateY(50%);
+        }
+    }
+    .root--about {
+        .image {
+            transform: scale(.5) translateX(50%) translateY(50%);
         }
     }
 }
