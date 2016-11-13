@@ -29,6 +29,8 @@ html, body, .root {
 }
 
 body {
+    // Prevent iOS overscroll
+    position: fixed;
     font-family: 'Amiri', serif;
     background-color: #B9A37D;
     -webkit-font-smoothing: antialiased;

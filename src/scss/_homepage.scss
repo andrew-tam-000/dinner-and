@@ -74,7 +74,7 @@
 
     .letter {
         transition: opacity $duration, transform $duration;
-        transform: translateX(100em);
+        transform: translateX(50vw);
 
         &.letter--enter {
             transform: none;
@@ -90,7 +90,7 @@
 
     .letter {
         opacity: 0;
-        transform: translateY(100em);
+        transform: translateY(50vh);
         transition: opacity .6s, transform .6s;
         &.letter--enter {
             opacity: 1;
@@ -118,9 +118,6 @@
 
         &:first-child {
             font-size: 1.5em;
-            // Force hardawre acceleration / rendering
-            backface-visibility: hidden;
-            perspective: 1000;
         }
 
         &.letter--leave-active {

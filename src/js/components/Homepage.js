@@ -37,6 +37,7 @@ class Homepage extends Component {
 
     componentDidMount() {
 
+
         window.setTimeout(() => {
             this.setState({
                 children: this.state.children.concat(
@@ -58,7 +59,7 @@ class Homepage extends Component {
                     </div>
                 )
             })
-        }, 3600 )
+        }, 3400 )
 
         window.setTimeout(() => {
             this.setState({
@@ -72,7 +73,7 @@ class Homepage extends Component {
                     </div>
                 )
             })
-        }, 2400)
+        }, 2000)
 
     }
 }

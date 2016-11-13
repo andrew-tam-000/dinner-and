@@ -18,6 +18,7 @@ class ChangingTitle extends Component {
         return (
             <BouncyTitle
                 title={this.state.title}
+                speed={200}
             />
         )
     }

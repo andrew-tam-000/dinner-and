@@ -87,6 +87,7 @@ class BouncyTitle extends Component {
 
 BouncyTitle.defaultProps = {
     speed: 200
+    , single: false
 }
 
 export default BouncyTitle;
