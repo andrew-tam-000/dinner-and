@@ -57,7 +57,8 @@ gulp.task('watch', ['scss:watch', 'js:watch']);
 gulp.task('browser-sync', function() {
 
     browserSync.init({
-        server: {
+        notify: false
+        , server: {
             baseDir: './public'
         }
         , open: false
