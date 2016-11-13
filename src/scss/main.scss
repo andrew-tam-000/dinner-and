@@ -31,6 +31,8 @@ html, body, .root {
 body {
     font-family: 'Amiri', serif;
     background-color: #B9A37D;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 

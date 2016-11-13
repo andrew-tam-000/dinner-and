@@ -20,7 +20,7 @@ class BouncyTitle extends Component {
                     leave: 'letter-group__item--leave',
                     leaveActive: 'letter-group__item--leave-active',
                 }}
-                transitionEnterTimeout={1000}
+                transitionEnter={false}
                 transitionLeaveTimeout={1000}
                 className='letter-group'
                 component='div'
