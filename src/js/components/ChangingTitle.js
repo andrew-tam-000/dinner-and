@@ -10,6 +10,7 @@ class ChangingTitle extends Component {
 
         this.state = {
             title: props.topics[0]
+            , prevIndex: 0
         }
     }
 
@@ -22,11 +23,16 @@ class ChangingTitle extends Component {
     }
 
     componentDidMount() {
-        console.log(this.props);
-
         window.setInterval( () => {
+            let newIndex = this.state.prevIndex;
+
+            while( newIndex === this.state.prevIndex ) {
+                newIndex = Math.round(Math.random());
+            }
+
             this.setState({
-                title: this.props.topics[Math.round(Math.random() * (this.props.topics.length-1))]
+                title: this.props.topics[newIndex]
+                , prevIndex: newIndex
             });
         }, 3000)
     }
