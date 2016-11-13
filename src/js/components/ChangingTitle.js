@@ -6,8 +6,6 @@ class ChangingTitle extends Component {
     constructor(props) {
         super(props);
 
-        console.log(props);
-
         this.state = {
             title: props.topics[0]
             , prevIndex: 0

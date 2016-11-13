@@ -10,7 +10,7 @@ class Homepage extends Component {
 
         this.state = {
             children: [
-                <div className='homepage__title'>
+                <div key='homepage__title' className='homepage__title'>
                     <BouncyTitle
                         title='DINNER'
                         speed={100}
@@ -41,7 +41,7 @@ class Homepage extends Component {
         window.setTimeout(() => {
             this.setState({
                 children: this.state.children.concat(
-                    <div className='homepage__mini'>
+                    <div key='homepage__mini' className='homepage__mini'>
                         <BouncyTitle
                             title='AND'
                             single={true}
@@ -54,7 +54,7 @@ class Homepage extends Component {
         window.setTimeout(() => {
             this.setState({
                 children: this.state.children.concat(
-                    <div className='homepage__subtitle'>
+                    <div key='homepage__subtitle' className='homepage__subtitle'>
                         <ChangingTitle/>
                     </div>
                 )
@@ -64,7 +64,7 @@ class Homepage extends Component {
         window.setTimeout(() => {
             this.setState({
                 children: this.state.children.concat(
-                    <div className='homepage__attribution'>
+                    <div key='{homepage__attribution' className='homepage__attribution'>
                         <BouncyTitle
                             title='from the Clinton Collection'
                             words={true}

@@ -33,6 +33,7 @@ class Nav extends Component {
                     if ( this.state.items[idx] ) classes.push('nav__item--enter');
 
                     return <li
+                        key={item}
                         onClick={
                             () => this.props.dispatch(menuActions.changeRoute(item.toLowerCase().split(' ').join('-')))
                         }
