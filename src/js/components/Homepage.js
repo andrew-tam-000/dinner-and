@@ -68,7 +68,7 @@ class Homepage extends Component {
                         <BouncyTitle
                             title='from the Clinton Collection'
                             words={true}
-                            speed={150}
+                            speed={200}
                         />
                     </div>
                 )

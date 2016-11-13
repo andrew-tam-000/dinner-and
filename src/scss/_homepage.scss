@@ -116,8 +116,21 @@
 
     .letter {
 
+        // Added in some hacky fixes with  letter-spacing and text-indent
+        // to get the letters to show smoothly
+        letter-spacing: .5em;
+        text-indent: .25em;
+
         &:first-child {
             font-size: 1.5em;
+            // Needed to prevent some letters from jumping around
+            -webkit-backface-visibility: hidden;
+            -webkit-perspective: 1000;
+            margin-right: -.2em;
+        }
+
+        &:not(:first-child) {
+            margin-left: -.75em;
         }
 
         &.letter--leave-active {
