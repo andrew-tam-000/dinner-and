@@ -15,10 +15,7 @@ class Pictures extends Component {
                 )
             }>
                 <div className='pictures__container'>
-                    <img className='pictures__image'  src='./profile.png'/>
-                </div>
-                <div className='pictures__captions'>
-                    Captoins go here
+                    Pictures coming soon!
                 </div>
             </div>
         );

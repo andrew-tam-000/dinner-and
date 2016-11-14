@@ -17,11 +17,15 @@ class About extends Component {
                 <div className='about__question  about__question--one'>?</div>
                 <div className='about__question  about__question--two'>?</div>
                 <div className='about__content'>
-                    This is a quick little blurb about us!
 
-                    Hello here again
+                    {/*
+                    We're a group of friends from the L.E.S.
+                    looking to build community and companionship
+                    over food and festivities!
+                    */}
 
-                    And lastly, hello!
+                    Building community over dinner and festivity
+
                 </div>
             </div>
         );
