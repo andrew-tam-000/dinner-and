@@ -24,7 +24,7 @@ class About extends Component {
                     over food and festivities!
                     */}
 
-                    Building community over dinner and festivity
+                    Building community over dinner and festivity!
 
                 </div>
             </div>

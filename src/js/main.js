@@ -13,6 +13,9 @@ import Homepage from './components/Homepage';
 import About from './components/About';
 import Pictures from './components/Pictures';
 
+import WebFont from 'webfontloader';
+
+
 function dataJsSelector(selector) {
     return `[data-js=${selector}]`
 }
@@ -40,6 +43,22 @@ class Root extends Component {
 Root = connect(
     ({ route }) => ({ route })
 )(Root);
+
+
+window.WebFontConfig = {
+    loading() {
+        alert();
+    }
+    , active() {
+        alert();
+    }
+};
+
+WebFont.load({
+    google: {
+      families: ['Amiri', 'Great Vibes', 'Quintessential']
+    }
+});
 
 ReactDOM.render(
         <Provider store={store}>
